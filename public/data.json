@@ -1,0 +1,747 @@
+{
+  "properties": [
+    {
+      "id": 1,
+      "address": "123 Main St",
+      "rent": 1200,
+      "occupancyStatus": "Occupied",
+      "propertyValue": 200000,
+      "tenants": [
+        {
+          "id": 1,
+          "name": "John Doe",
+          "email": "john.doe@example.com",
+          "leaseStart": "2022-05-01",
+          "leaseEnd": "2023-04-30",
+          "rentPaid": true,
+          "rentAmount": 1200
+        },
+        {
+          "id": 2,
+          "name": "Jane Smith",
+          "email": "jane.smith@example.com",
+          "leaseStart": "2023-03-01",
+          "leaseEnd": "2024-02-29",
+          "rentPaid": false,
+          "rentAmount": 1800
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "address": "456 Elm St",
+      "rent": 1500,
+      "occupancyStatus": "Vacant",
+      "propertyValue": 180000,
+      "tenants": []
+    },
+    {
+      "id": 3,
+      "address": "789 Oak Ave",
+      "rent": 1800,
+      "occupancyStatus": "Occupied",
+      "propertyValue": 250000,
+      "tenants": [
+        {
+          "id": 2,
+          "name": "Jane Smith",
+          "email": "jane.smith@example.com",
+          "leaseStart": "2023-03-01",
+          "leaseEnd": "2024-02-29",
+          "rentPaid": false,
+          "rentAmount": 1800
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "address": "567 Pine St",
+      "rent": 1600,
+      "occupancyStatus": "Occupied",
+      "propertyValue": 220000,
+      "tenants": [
+        {
+          "id": 3,
+          "name": "Bob Johnson",
+          "email": "bob.johnson@example.com",
+          "leaseStart": "2023-02-15",
+          "leaseEnd": "2024-02-14",
+          "rentPaid": true,
+          "rentAmount": 1600
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "address": "890 Maple Ave",
+      "rent": 2000,
+      "occupancyStatus": "Occupied",
+      "propertyValue": 300000,
+      "tenants": [
+        {
+          "id": 4,
+          "name": "Alice Williams",
+          "email": "alice.williams@example.com",
+          "leaseStart": "2023-05-01",
+          "leaseEnd": "2024-04-30",
+          "rentPaid": true,
+          "rentAmount": 2000
+        }
+      ]
+    }
+  ],
+
+  "maintenanceRequests": [
+    {
+      "id": 1,
+      "propertyId": 1,
+      "address": "123 Main St",
+      "description": "Leaky faucet in the kitchen",
+      "status": "Open",
+      "priority": "Medium"
+    },
+    {
+      "id": 2,
+      "propertyId": 3,
+      "address": "789 Oak Ave",
+      "description": "Broken door handle in Bedroom 2",
+      "status": "In Progress",
+      "priority": "High"
+    },
+    {
+      "id": 3,
+      "propertyId": 2,
+      "address": "456 Elm St",
+      "description": "Clogged sink in the bathroom",
+      "status": "Closed",
+      "priority": "Low"
+    },
+    {
+      "id": 4,
+      "propertyId": 1,
+      "address": "123 Main St",
+      "description": "Light bulb needs replacement in Living Room",
+      "status": "Open",
+      "priority": "Medium"
+    },
+    {
+      "id": 5,
+      "propertyId": 2,
+      "address": "456 Elm St",
+      "description": "Heating system not working in Bedroom 1",
+      "status": "Open",
+      "priority": "High"
+    },
+    {
+      "id": 6,
+      "propertyId": 1,
+      "address": "123 Main St",
+      "description": "Broken window in Bedroom 3",
+      "status": "Open",
+      "priority": "Medium"
+    },
+    {
+      "id": 7,
+      "propertyId": 3,
+      "address": "789 Oak Ave",
+      "description": "Leaking roof in the attic",
+      "status": "Open",
+      "priority": "High"
+    },
+    {
+      "id": 8,
+      "propertyId": 2,
+      "address": "456 Elm St",
+      "description": "Malfunctioning thermostat in the living room",
+      "status": "In Progress",
+      "priority": "Medium"
+    },
+    {
+      "id": 9,
+      "propertyId": 1,
+      "address": "123 Main St",
+      "description": "Mold growth in the basement",
+      "status": "Open",
+      "priority": "High"
+    },
+    {
+      "id": 10,
+      "propertyId": 3,
+      "address": "789 Oak Ave",
+      "description": "Flickering lights in the hallway",
+      "status": "Open",
+      "priority": "Low"
+    },
+    {
+      "id": 11,
+      "propertyId": 2,
+      "address": "456 Elm St",
+      "description": "Faulty electrical outlet in Bedroom 2",
+      "status": "In Progress",
+      "priority": "High"
+    },
+    {
+      "id": 12,
+      "propertyId": 1,
+      "address": "123 Main St",
+      "description": "Broken dishwasher in the kitchen",
+      "status": "Closed",
+      "priority": "Medium"
+    },
+    {
+      "id": 13,
+      "propertyId": 2,
+      "address": "456 Elm St",
+      "description": "Water leakage in the laundry room",
+      "status": "Open",
+      "priority": "High"
+    },
+    {
+      "id": 14,
+      "propertyId": 1,
+      "address": "123 Main St",
+      "description": "Hole in the wall in Bedroom 1",
+      "status": "Open",
+      "priority": "Medium"
+    },
+    {
+      "id": 15,
+      "propertyId": 3,
+      "address": "789 Oak Ave",
+      "description": "Faulty smoke detector in the living room",
+      "status": "In Progress",
+      "priority": "Low"
+    }
+  ],
+
+  "payments": [
+    {
+      "id": 1,
+      "tenantId": 1,
+      "amount": 1200,
+      "date": "2023-01-01",
+      "status": "Paid",
+      "address": "123 Main St"
+    },
+    {
+      "id": 2,
+      "tenantId": 2,
+      "amount": 1800,
+      "date": "2023-01-10",
+      "status": "Paid",
+      "address": "789 Oak Ave"
+    },
+    {
+      "id": 3,
+      "tenantId": 1,
+      "amount": 1200,
+      "date": "2023-02-01",
+      "status": "Paid",
+      "address": "123 Main St"
+    },
+    {
+      "id": 4,
+      "tenantId": 2,
+      "amount": 1800,
+      "date": "2023-02-10",
+      "status": "Paid",
+      "address": "789 Oak Ave"
+    },
+    {
+      "id": 5,
+      "tenantId": 3,
+      "amount": 1600,
+      "date": "2023-02-15",
+      "status": "Paid",
+      "address": "567 Pine St"
+    },
+    {
+      "id": 6,
+      "tenantId": 4,
+      "amount": 2000,
+      "date": "2023-02-01",
+      "status": "Paid",
+      "address": "890 Maple Ave"
+    },
+    {
+      "id": 7,
+      "tenantId": 1,
+      "amount": 1200,
+      "date": "2023-03-01",
+      "status": "Paid",
+      "address": "123 Main St"
+    },
+    {
+      "id": 8,
+      "tenantId": 2,
+      "amount": 1800,
+      "date": "2023-03-10",
+      "status": "Paid",
+      "address": "789 Oak Ave"
+    },
+    {
+      "id": 9,
+      "tenantId": 3,
+      "amount": 1600,
+      "date": "2023-03-15",
+      "status": "Paid",
+      "address": "567 Pine St"
+    },
+    {
+      "id": 10,
+      "tenantId": 4,
+      "amount": 2000,
+      "date": "2023-03-01",
+      "status": "Paid",
+      "address": "890 Maple Ave"
+    },
+    {
+      "id": 11,
+      "tenantId": 1,
+      "amount": 1200,
+      "date": "2023-04-01",
+      "status": "Paid",
+      "address": "123 Main St"
+    },
+    {
+      "id": 12,
+      "tenantId": 2,
+      "amount": 1800,
+      "date": "2023-04-10",
+      "status": "Paid",
+      "address": "789 Oak Ave"
+    },
+    {
+      "id": 13,
+      "tenantId": 3,
+      "amount": 1600,
+      "date": "2023-04-15",
+      "status": "Paid",
+      "address": "567 Pine St"
+    },
+    {
+      "id": 14,
+      "tenantId": 4,
+      "amount": 2000,
+      "date": "2023-04-01",
+      "status": "Paid",
+      "address": "890 Maple Ave"
+    },
+    {
+      "id": 15,
+      "tenantId": 1,
+      "amount": 1200,
+      "date": "2023-05-01",
+      "status": "Paid",
+      "address": "123 Main St"
+    },
+    {
+      "id": 16,
+      "tenantId": 2,
+      "amount": 1800,
+      "date": "2023-05-10",
+      "status": "Paid",
+      "address": "789 Oak Ave"
+    },
+    {
+      "id": 17,
+      "tenantId": 3,
+      "amount": 1600,
+      "date": "2023-05-15",
+      "status": "Paid",
+      "address": "567 Pine St"
+    },
+    {
+      "id": 18,
+      "tenantId": 4,
+      "amount": 2000,
+      "date": "2023-05-01",
+      "status": "Paid",
+      "address": "890 Maple Ave"
+    },
+    {
+      "id": 19,
+      "tenantId": 1,
+      "amount": 1200,
+      "date": "2023-06-01",
+      "status": "Paid",
+      "address": "123 Main St"
+    },
+    {
+      "id": 20,
+      "tenantId": 2,
+      "amount": 1800,
+      "date": "2023-06-10",
+      "status": "Pending",
+      "address": "789 Oak Ave"
+    },
+    {
+      "id": 21,
+      "tenantId": 3,
+      "amount": 1600,
+      "date": "2023-06-15",
+      "status": "Pending",
+      "address": "567 Pine St"
+    },
+    {
+      "id": 22,
+      "tenantId": 4,
+      "amount": 2000,
+      "date": "2023-06-01",
+      "status": "Pending",
+      "address": "890 Maple Ave"
+    },
+    {
+      "id": 23,
+      "tenantId": 1,
+      "amount": 1200,
+      "date": "2023-07-01",
+      "status": "Pending",
+      "address": "123 Main St"
+    },
+    {
+      "id": 24,
+      "tenantId": 2,
+      "amount": 1800,
+      "date": "2023-07-10",
+      "status": "Pending",
+      "address": "789 Oak Ave"
+    },
+    {
+      "id": 25,
+      "tenantId": 3,
+      "amount": 1600,
+      "date": "2023-07-15",
+      "status": "Pending",
+      "address": "567 Pine St"
+    },
+    {
+      "id": 26,
+      "tenantId": 4,
+      "amount": 2000,
+      "date": "2023-07-01",
+      "status": "Pending",
+      "address": "890 Maple Ave"
+    },
+    {
+      "id": 27,
+      "tenantId": 1,
+      "amount": 1200,
+      "date": "2023-08-01",
+      "status": "Pending",
+      "address": "123 Main St"
+    },
+    {
+      "id": 28,
+      "tenantId": 2,
+      "amount": 1800,
+      "date": "2023-08-10",
+      "status": "Pending",
+      "address": "789 Oak Ave"
+    },
+    {
+      "id": 29,
+      "tenantId": 3,
+      "amount": 1600,
+      "date": "2023-08-15",
+      "status": "Pending",
+      "address": "567 Pine St"
+    },
+    {
+      "id": 30,
+      "tenantId": 4,
+      "amount": 2000,
+      "date": "2023-08-01",
+      "status": "Pending",
+      "address": "890 Maple Ave"
+    },
+    {
+      "id": 31,
+      "tenantId": 1,
+      "amount": 1200,
+      "date": "2023-09-01",
+      "status": "Pending",
+      "address": "123 Main St"
+    },
+    {
+      "id": 32,
+      "tenantId": 2,
+      "amount": 1800,
+      "date": "2023-09-10",
+      "status": "Pending",
+      "address": "789 Oak Ave"
+    },
+    {
+      "id": 33,
+      "tenantId": 3,
+      "amount": 1600,
+      "date": "2023-09-15",
+      "status": "Pending",
+      "address": "567 Pine St"
+    },
+    {
+      "id": 34,
+      "tenantId": 4,
+      "amount": 2000,
+      "date": "2023-09-01",
+      "status": "Pending",
+      "address": "890 Maple Ave"
+    },
+    {
+      "id": 35,
+      "tenantId": 1,
+      "amount": 1200,
+      "date": "2023-10-01",
+      "status": "Pending",
+      "address": "123 Main St"
+    },
+    {
+      "id": 36,
+      "tenantId": 2,
+      "amount": 1800,
+      "date": "2023-10-10",
+      "status": "Pending",
+      "address": "789 Oak Ave"
+    },
+    {
+      "id": 37,
+      "tenantId": 3,
+      "amount": 1600,
+      "date": "2023-10-15",
+      "status": "Pending",
+      "address": "567 Pine St"
+    },
+    {
+      "id": 38,
+      "tenantId": 4,
+      "amount": 2000,
+      "date": "2023-10-01",
+      "status": "Pending",
+      "address": "890 Maple Ave"
+    },
+    {
+      "id": 39,
+      "tenantId": 1,
+      "amount": 1200,
+      "date": "2023-11-01",
+      "status": "Pending",
+      "address": "123 Main St"
+    },
+    {
+      "id": 40,
+      "tenantId": 2,
+      "amount": 1800,
+      "date": "2023-11-10",
+      "status": "Pending",
+      "address": "789 Oak Ave"
+    },
+    {
+      "id": 41,
+      "tenantId": 3,
+      "amount": 1600,
+      "date": "2023-11-15",
+      "status": "Pending",
+      "address": "567 Pine St"
+    },
+    {
+      "id": 42,
+      "tenantId": 4,
+      "amount": 2000,
+      "date": "2023-11-01",
+      "status": "Pending",
+      "address": "890 Maple Ave"
+    },
+    {
+      "id": 43,
+      "tenantId": 1,
+      "amount": 1200,
+      "date": "2023-12-01",
+      "status": "Pending",
+      "address": "123 Main St"
+    },
+    {
+      "id": 44,
+      "tenantId": 2,
+      "amount": 1800,
+      "date": "2023-12-10",
+      "status": "Pending",
+      "address": "789 Oak Ave"
+    },
+    {
+      "id": 45,
+      "tenantId": 3,
+      "amount": 1600,
+      "date": "2023-12-15",
+      "status": "Pending",
+      "address": "567 Pine St"
+    },
+    {
+      "id": 46,
+      "tenantId": 4,
+      "amount": 2000,
+      "date": "2023-12-01",
+      "status": "Pending",
+      "address": "890 Maple Ave"
+    }
+  ],
+  "expenses": [
+    {
+      "id": 1,
+      "description": "Office Supplies",
+      "amount": 150.5,
+      "date": "2023-05-01",
+      "category": "Supplies",
+      "reason": "Purchased office stationery and supplies"
+    },
+    {
+      "id": 2,
+      "description": "Internet Bill",
+      "amount": 75.0,
+      "date": "2023-05-05",
+      "category": "Utilities",
+      "reason": "Paid monthly internet bill"
+    },
+    {
+      "id": 3,
+      "description": "Maintenance Service",
+      "amount": 250.75,
+      "date": "2023-05-07",
+      "category": "Services",
+      "reason": "Hired maintenance service for repairs"
+    },
+    {
+      "id": 4,
+      "description": "Advertising Campaign",
+      "amount": 500.0,
+      "date": "2023-05-10",
+      "category": "Marketing",
+      "reason": "Ran a marketing campaign for property promotion"
+    },
+    {
+      "id": 5,
+      "description": "Property Insurance",
+      "amount": 300.25,
+      "date": "2023-05-12",
+      "category": "Insurance",
+      "reason": "Paid annual property insurance premium"
+    },
+    {
+      "id": 6,
+      "description": "Cleaning Services",
+      "amount": 120.0,
+      "date": "2023-05-15",
+      "category": "Services",
+      "reason": "Hired professional cleaners for property cleaning"
+    },
+    {
+      "id": 7,
+      "description": "Repairs and Maintenance",
+      "amount": 400.0,
+      "date": "2023-05-18",
+      "category": "Services",
+      "reason": "Conducted repairs and maintenance on the property"
+    },
+    {
+      "id": 8,
+      "description": "Advertising Expenses",
+      "amount": 200.0,
+      "date": "2023-05-20",
+      "category": "Marketing",
+      "reason": "Invested in online and print advertising"
+    },
+    {
+      "id": 9,
+      "description": "Legal Services",
+      "amount": 350.5,
+      "date": "2023-05-22",
+      "category": "Services",
+      "reason": "Sought legal advice for property-related matters"
+    },
+    {
+      "id": 10,
+      "description": "Property Taxes",
+      "amount": 500.0,
+      "date": "2023-05-25",
+      "category": "Taxes",
+      "reason": "Paid monthly property taxes"
+    },
+    {
+      "id": 11,
+      "description": "Landscaping",
+      "amount": 180.0,
+      "date": "2023-05-27",
+      "category": "Services",
+      "reason": "Maintained and improved property landscaping"
+    },
+    {
+      "id": 12,
+      "description": "Accounting Services",
+      "amount": 250.0,
+      "date": "2023-05-30",
+      "category": "Services",
+      "reason": "Hired accounting services for financial management"
+    },
+    {
+      "id": 13,
+      "description": "Pest Control",
+      "amount": 150.0,
+      "date": "2023-06-02",
+      "category": "Services",
+      "reason": "Conducted pest control measures on the property"
+    },
+    {
+      "id": 14,
+      "description": "Property Upgrades",
+      "amount": 800.0,
+      "date": "2023-06-05",
+      "category": "Upgrades",
+      "reason": "Invested in property upgrades and renovations"
+    },
+    {
+      "id": 15,
+      "description": "Roof Repairs",
+      "amount": 700.0,
+      "date": "2023-06-08",
+      "category": "Repairs",
+      "reason": "Repaired and maintained the property roof"
+    }
+  ],
+  "tenants": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "leaseStart": "2021-08-01",
+      "leaseEnd": "2022-07-31",
+      "rentPaid": true,
+      "rentAmount": 1200
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "email": "jane.smith@example.com",
+      "leaseStart": "2021-09-01",
+      "leaseEnd": "2022-08-31",
+      "rentPaid": false,
+      "rentAmount": 1500
+    },
+    {
+      "id": 3,
+      "name": "Bob Johnson",
+      "email": "bob.johnson@example.com",
+      "leaseStart": "2022-03-15",
+      "leaseEnd": "2023-03-14",
+      "rentPaid": true,
+      "rentAmount": 1350
+    },
+    {
+      "id": 4,
+      "name": "Alice Williams",
+      "email": "alice.williams@example.com",
+      "leaseStart": "2022-06-01",
+      "leaseEnd": "2023-05-31",
+      "rentPaid": true,
+      "rentAmount": 1450
+    }
+  ]
+}
