@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import OverallSummary from './OverallSummary';
 
 const Dashboard = () => {
   const [properties, setProperties] = useState([]);
@@ -26,12 +27,22 @@ const Dashboard = () => {
     }
     fetchData();
   }, [])
-
+  const totalIncome = payments.reduce((sum, payment) => sum + payment.amount, 0);
+  const totalExpenses = expenses.reduce((sum, expense) => sum + expense.amount, 0);
+  const highPriorityMaintenance = maintenance.filter((request) => request.priority === "High");
+  console.log(highPriorityMaintenance, 'high priority maintnenace')
+  const calculateAverageMonthlyIncome = () => {
+    const averageIncome = totalIncome / 12;
+    return averageIncome;
+  }
+  const totalMonthlyIncome = calculateAverageMonthlyIncome();
 
 
 
   return (
-    <div>index</div>
+    <div>
+      <OverallSummary monthlyIncome={totalMonthlyIncome} totalIncome={totalIncome} totalExpenses={totalExpenses} highPriorityMaintenance={highPriorityMaintenance} />
+    </div>
   )
 }
 
