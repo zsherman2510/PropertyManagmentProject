@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import OverallSummary from './OverallSummary';
+import FinancialSummary from './FinancialSummary';
+import Chart from "chart.js/auto"
+import { CategoryScale } from 'chart.js';
 
+Chart.register(CategoryScale);
 const Dashboard = () => {
   const [properties, setProperties] = useState([]);
   const [maintenance, setMaintenance] = useState([]);
@@ -27,10 +31,12 @@ const Dashboard = () => {
     }
     fetchData();
   }, [])
+  const monthlyGoal = 100000;
+  const months = [...new Set(payments.map(payment => payment.date.substring(0, 7)))];
+
   const totalIncome = payments.reduce((sum, payment) => sum + payment.amount, 0);
   const totalExpenses = expenses.reduce((sum, expense) => sum + expense.amount, 0);
   const highPriorityMaintenance = maintenance.filter((request) => request.priority === "High");
-  console.log(highPriorityMaintenance, 'high priority maintnenace')
   const calculateAverageMonthlyIncome = () => {
     const averageIncome = totalIncome / 12;
     return averageIncome;
@@ -42,6 +48,12 @@ const Dashboard = () => {
   return (
     <div>
       <OverallSummary monthlyIncome={totalMonthlyIncome} totalIncome={totalIncome} totalExpenses={totalExpenses} highPriorityMaintenance={highPriorityMaintenance} />
+      <div className="wrapper container d-flex flex-wrap justify-content-around p-3 mt-4 align-items-center">
+        <div className='col-12 col-md-8'>
+          <FinancialSummary payments={payments} monthlyGoal={monthlyGoal} months={months}/>
+        </div>
+        
+      </div>
     </div>
   )
 }
