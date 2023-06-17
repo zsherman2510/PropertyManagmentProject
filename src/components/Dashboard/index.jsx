@@ -3,6 +3,7 @@ import OverallSummary from './OverallSummary';
 import FinancialSummary from './FinancialSummary';
 import Chart from "chart.js/auto"
 import { CategoryScale } from 'chart.js';
+import FinancialGoal from './FinancialGoal';
 
 Chart.register(CategoryScale);
 const Dashboard = () => {
@@ -31,9 +32,9 @@ const Dashboard = () => {
     }
     fetchData();
   }, [])
+
   const monthlyGoal = 100000;
   const months = [...new Set(payments.map(payment => payment.date.substring(0, 7)))];
-
   const totalIncome = payments.reduce((sum, payment) => sum + payment.amount, 0);
   const totalExpenses = expenses.reduce((sum, expense) => sum + expense.amount, 0);
   const highPriorityMaintenance = maintenance.filter((request) => request.priority === "High");
@@ -42,7 +43,8 @@ const Dashboard = () => {
     return averageIncome;
   }
   const totalMonthlyIncome = calculateAverageMonthlyIncome();
-
+  const goalPercentage = (totalMonthlyIncome / monthlyGoal) * 100;
+  const adjustedPercentage = goalPercentage.toFixed(0);
 
 
   return (
@@ -52,7 +54,9 @@ const Dashboard = () => {
         <div className='col-12 col-md-8'>
           <FinancialSummary payments={payments} monthlyGoal={monthlyGoal} months={months}/>
         </div>
-        
+        <div className="col-12 col-md-3 my-4">
+          <FinancialGoal goalAmount={monthlyGoal} goalPercentage={adjustedPercentage}/>
+        </div>
       </div>
     </div>
   )
