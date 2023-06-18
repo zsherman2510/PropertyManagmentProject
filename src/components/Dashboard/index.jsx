@@ -5,6 +5,7 @@ import Chart from "chart.js/auto"
 import { CategoryScale } from 'chart.js';
 import FinancialGoal from './FinancialGoal';
 import PropertySummary from './PropertySummary';
+import ExpenseSummary from './ExpenseSummary';
 
 Chart.register(CategoryScale);
 const Dashboard = () => {
@@ -60,6 +61,9 @@ const Dashboard = () => {
         </div>
         <div className="col-12">
           <PropertySummary properties={properties}/>
+        </div>
+        <div className="col-12 col-md-8">
+          <ExpenseSummary expenses={expenses} />
         </div>
       </div>
     </div>
