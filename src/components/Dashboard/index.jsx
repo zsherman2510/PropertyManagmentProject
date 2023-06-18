@@ -6,6 +6,7 @@ import { CategoryScale } from 'chart.js';
 import FinancialGoal from './FinancialGoal';
 import PropertySummary from './PropertySummary';
 import ExpenseSummary from './ExpenseSummary';
+import MaintenanceSummary from './MaintenanceSummary';
 
 Chart.register(CategoryScale);
 const Dashboard = () => {
@@ -64,6 +65,9 @@ const Dashboard = () => {
         </div>
         <div className="col-12 col-md-8">
           <ExpenseSummary expenses={expenses} />
+        </div>
+        <div className="col-12 col-md-3 align-self-center">
+          <MaintenanceSummary maintenanceRequests={maintenance} />
         </div>
       </div>
     </div>
