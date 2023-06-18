@@ -4,6 +4,7 @@ import FinancialSummary from './FinancialSummary';
 import Chart from "chart.js/auto"
 import { CategoryScale } from 'chart.js';
 import FinancialGoal from './FinancialGoal';
+import PropertySummary from './PropertySummary';
 
 Chart.register(CategoryScale);
 const Dashboard = () => {
@@ -56,6 +57,9 @@ const Dashboard = () => {
         </div>
         <div className="col-12 col-md-3 my-4">
           <FinancialGoal goalAmount={monthlyGoal} goalPercentage={adjustedPercentage}/>
+        </div>
+        <div className="col-12">
+          <PropertySummary properties={properties}/>
         </div>
       </div>
     </div>
